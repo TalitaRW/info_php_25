@@ -9,3 +9,7 @@ fileopen folder: seleciona tudo e apaga
 terminal novo terminal
 verifica se está em:/var/www/html/info_php_2
 
+subir codigo
+    git add . 
+    git commit -m "..."
+    git push
