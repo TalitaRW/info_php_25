@@ -41,9 +41,9 @@ for($i = 0; $i <=10; $i++)
 // 20/05/2025
 
 // constante
-const DATA_NASCIMENTO = "01/01/1950";
+//const DATA_NASCIMENTO = "01/01/1950";
 //constante sempre neste formato -> snake case e maiusculas
-echo "<br/>";
+/**echo "<br/>";
 
 echo DATA_NASCIMENTO,"<br/>";
 
@@ -55,7 +55,7 @@ $potencia_10 = 4e20;
 echo $potencia_10, "<br/>";
 
 echo 4 * $potencia_10, "<br/>";
-
+*/
 //mock/chumbado - valores fixos "informados pelo usuario"
 /*$valorA = 3;
 $valorB = 5;
@@ -71,7 +71,7 @@ if ($valorA == $valorB){
 /**
  * verificar a apartir de um ano(numero) informado a idade do usuario, se é maior de idade.
 */
-
+/*
 $ano_nascimento = 2010;
 $ano = date("Y");
 
@@ -84,7 +84,7 @@ if($idade < 18){
 }else{
     echo "<br/>Sua idade é  $idade anos - Maior de idade";
 }
-
+*/
 /**
  * dadas as notas de 4 provas, a media para aprovação é 7.
  * calcular se o aluno atiniu a média e informar se o aluno foi aprovado.
@@ -92,25 +92,137 @@ if($idade < 18){
  * calcular a média pnderada e harmonica
  */
 
-echo "<br/> Médias";
+/*echo "<br/> Médias";
 echo "<br/>";
-$nota_1 = 5;
+$nota_1 = 9;
 $nota_2 = 6;
-$nota_3 = 7.8;
+$nota_3 = 8;
 $nota_4 = 6.7;
 
 $media = ($nota_1 + $nota_2 + $nota_3 + $nota_4) / 4;
-
+echo "<br/> Media = ", number_format($media, 2);
 
 if($media < 7){
-    echo "<br/> $media Reprovado";
-}else{echo "<br/> $media Aprovado";}
+    echo "<br/> Reprovado";
+}else{echo "<br/>Aprovado";}
 
 $media_harmonica = 4 / (1/$nota_1 + 1/$nota_2 + 1/$nota_3 + 1/$nota_4 );
-echo "<br/> Media Harmonica $media_harmonica";
+echo "<br/> Media Harmonica = ", number_format($media_harmonica, 2);
+
+if($media_harmonica < 7){
+    echo "<br/>Reprovado";
+}else{echo "<br/>Aprovado";}
 
 $media_ponderada = ($nota_1 * 1 + $nota_2 * 2 + $nota_3 * 3 + $nota_4 * 4) / (1 + 2 + 3 + 4);
-echo "<br/> Media Ponderada $media_ponderada";
+echo "<br/> Media Ponderada = ", number_format($media_ponderada, 2);
+
+if($media_ponderada < 7){
+    echo "<br/>Reprovado";
+}else{echo "<br/>Aprovado";}
+*/
+
+//CALCULADORA
+
+// $operacao = "+";
+// $valor_1 = 8;
+// $valor_2 = 5;
+// $resultado = 0;
+
+// if ($operacao == "+"){
+//     $resultado = $valor_1 + $valor_2;
+//     echo "<br/> $valor_1 + $valor_2 = $resultado";
+// } else if ($operacao == "-"){
+//     $resultado = $valor_1 - $valor_2;
+//     echo "<br/> $valor_1 - $valor_2 = $resultado";
+// } else if ($operacao == "*"){
+//     $resultado = $valor_1 * $valor_2;
+//     echo "<br/> $valor_1 * $valor_2 = $resultado";
+// } else if ($operacao == "/" && $valor_2 != 0){
+//     $resultado = $valor_1 / $valor_2;
+//     echo "<br/> $valor_1 / $valor_2", " = ", number_format($resultado, 2);
+// }else{
+//     echo "<br/>Operação Invalida";
+// }
+
+// switch ($operacao){
+//     case '+':
+//         echo "<br/> $valor_1 + $valor_2 =", number_format($valor_1 + $valor_2, 2);
+//         break;
+//     case "-":
+//         echo "<br/> $valor_1 - $valor_2 = ", number_format($valor_1 - $valor_2, 2);
+//         break;
+//     case "*":
+//         echo "<br/> $valor_1 * $valor_2 = ", number_format($valor_1 * $valor_2, 2);
+//         break;    
+//     case "/":
+//         if ($valor_2 == 0){
+//             echo "<br/>DIV/0";
+//         }else{
+//             echo "<br/> $valor_1 / $valor_2", " = ", number_format($valor_1 / $valor_2, 2);
+//             break;
+//         }
+
+//     default;
+//         echo "<br/><br/>Operação Invalida";
+//         break;
+// }
+
+/*ler 3 valore e informar se eles são iguais*/
+// $valor_A = 6;
+// $valor_B = 6;
+// $valor_C = 6;
+// if ($valor_A == $valor_B && $valor_A == $valor_C){
+//     echo "<br/> $valor_A = $valor_B = $valor_C <br/>Valores Iguais";
+// }else {echo "<br/>Os valores não são iguais";}
+
+
+
+/*ler 3 valores e informar o tipo de triangulo formado*/
+// $lado_A = 82;
+// $lado_B = 80;
+// $lado_C = 44;
+ 
+// //verificar existencia - soma de quaisquer dois lados deve ser maior que o terceiro
+// if ($lado_A == $lado_B && $lado_B == $lado_C){
+//     echo "<br/>Triangulo Equilátero";
+// }else if ($lado_A + $lado_B > $lado_C && $lado_A + $lado_C > $lado_B && $lado_C + $lado_B > $lado_A){
+//     if($lado_A != $lado_B && $lado_B != $lado_C){
+//         echo "<br/>Triangulo Escaleno";
+//     }else{echo "<br/>Triangulo Isóseles"; }
+// }else{ echo "<br/>Não é triangulo!!!!";}
+
+//FOR
+// for($i = 0; $i < 10; $i++){
+//     echo "<br/> $i";
+
+// }
+// echo "<br/> ----------------------";
+// $i = 0;
+// while ($i < 10){
+//     echo "<br/> $i";
+//     $i++;
+// }
+// echo "<br/> ----------------------";
+// $j = 11;
+// do{
+//      echo "<br/> $j";
+//     $j++;
+// }while($j < 10);
+
+/**refazer o exercicio da tabuada  */
+
+$multiplicador = 5;
+$i=0;
+for ($i = 0; $i <= 10; $k++){
+    echo "$i X $multiplicador = ", $i * $multiplicador, "<br/>";
+}
+
+
+
+
+
+
+
 
 
 
