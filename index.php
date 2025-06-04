@@ -211,18 +211,102 @@ if($media_ponderada < 7){
 
 /**refazer o exercicio da tabuada  */
 
-$multiplicador = 5;
-$i=0;
-for ($i = 0; $i <= 10; $k++){
-    echo "$i X $multiplicador = ", $i * $multiplicador, "<br/>";
+// $multiplicador = 5;
+// $i=0;
+// for ($i = 0; $i <= 10; $i++){
+//     echo "$i x $multiplicador = ", $i * $multiplicador, "<br/>";
+// }
+
+// echo "<br/>";
+
+// $i = 0;
+// while($i <= 10){
+//     echo "$multiplicador x $i = ", $multiplicador * $i, "<br/>";
+//     $i++;
+// }
+
+/**03/06/2025*/
+
+// $a = 5/2;
+// echo $a;
+// echo "<br/>";
+// $b = 5%2;
+// echo $b;
+// echo "<br/>";
+// $c = intdiv(5,2);
+// echo $c;
+
+//para descobrir se é par ou não
+
+// $resultado = 10 / 2;
+// $resultado = 10 % 2;
+
+// $numero = 1452362;
+// $resto = $numero % 2;
+// $par = $resto == 0;
+
+
+//20 primeiros pares
+
+// echo "FOR--------<br/>";
+// $cont = 1;
+// for($i = 0; $cont < 21; $i++){
+//     if($i % 2 == 0){
+//         echo "$cont -> $i <br/>";
+//         $cont++;        
+//     }
+// }
+
+// echo "WHILE--------";
+// $cont = 1;
+// $k = 0;
+// while($cont < 21){
+//     if($k % 2 == 0){
+//         echo "<br/>$cont ->$k";
+//         $cont++;
+//     }
+//     $k++;
+// }
+//contagem regressiva de 10 - 0
+echo "<br/>CONTAGEM REGRES.";
+for($i = 10; $i>=0; $i--){
+    echo "<br/>$i";
+}
+echo "<br/>PRIMOS";
+// encontrar os primeiros 5 primeiros primos
+
+$numero = 2;
+$cont = 0;
+
+while ($cont < 15){
+    $divisores = 0;
+    
+    for($div =1; $div <= $numero; $div++){
+        if($numero % $div == 0){
+            $divisores++;
+        }
+    }
+    if($divisores == 2){
+        $cont++;
+        echo "<br/>$cont -> $numero";
+        
+    }
+    $numero++;
+    
 }
 
-
-
-
-
-
-
-
-
-
+echo "<br/>PRIMOS 2";
+// encontrar os primeiros 5 primeiros primos
+$cont = 0;
+for($numero = 2; $cont < 15;  $numero++){
+    $divisores = 0;
+    for($div = 1; $div <= $numero; $div++){
+        if($numero % $div == 0){
+            $divisores++;
+        }
+    }
+    if($divisores == 2){
+        $cont++;
+        echo "<br/>$cont -> $numero";
+    }
+}
