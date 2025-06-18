@@ -268,45 +268,155 @@ if($media_ponderada < 7){
 //     $k++;
 // }
 //contagem regressiva de 10 - 0
-echo "<br/>CONTAGEM REGRES.";
-for($i = 10; $i>=0; $i--){
-    echo "<br/>$i";
-}
-echo "<br/>PRIMOS";
-// encontrar os primeiros 5 primeiros primos
+// echo "<br/>CONTAGEM REGRES.";
+// for($i = 10; $i>=0; $i--){
+//     echo "<br/>$i";
+// }
+// echo "<br/>PRIMOS";
+// // encontrar os primeiros 5 primeiros primos
 
-$numero = 2;
-$cont = 0;
+// $numero = 2;
+// $cont = 0;
 
-while ($cont < 15){
-    $divisores = 0;
+// while ($cont < 15){
+//     $divisores = 0;
     
-    for($div =1; $div <= $numero; $div++){
-        if($numero % $div == 0){
-            $divisores++;
-        }
-    }
-    if($divisores == 2){
-        $cont++;
-        echo "<br/>$cont -> $numero";
+//     for($div =1; $div <= $numero; $div++){
+//         if($numero % $div == 0){
+//             $divisores++;
+//         }
+//     }
+//     if($divisores == 2){
+//         $cont++;
+//         echo "<br/>$cont -> $numero";
         
-    }
-    $numero++;
+//     }
+//     $numero++;
     
-}
+// }
 
-echo "<br/>PRIMOS 2";
-// encontrar os primeiros 5 primeiros primos
-$cont = 0;
-for($numero = 2; $cont < 15;  $numero++){
-    $divisores = 0;
-    for($div = 1; $div <= $numero; $div++){
-        if($numero % $div == 0){
-            $divisores++;
+// echo "<br/>PRIMOS 2";
+// // encontrar os primeiros 5 primeiros primos
+// $cont = 0;
+// for($numero = 2; $cont < 15;  $numero++){
+//     $divisores = 0;
+//     for($div = 1; $div <= $numero; $div++){
+//         if($numero % $div == 0){
+//             $divisores++;
+//         }
+//     }
+//     if($divisores == 2){
+//         $cont++;
+//         echo "<br/>$cont -> $numero";
+//     }
+// }
+
+//17/06_____________________________________________
+
+// $primos = [];
+// $cont = 0;
+// for($numero = 2; $cont < 15;  $numero++){
+//     $divisores = 0;
+//     for($div = 1; $div <= $numero; $div++){
+//         if($numero % $div == 0){
+//             $divisores++;
+            
+//         }
+//     }
+//     if($divisores == 2){
+//         $cont++;
+//         $primos[] = $numero;
+        
+//     }
+// }
+// echo "<br/>Primos: ";
+// for($i = 0; $i < 15; $i++){
+//     echo "$primos[$i], ";
+// }
+
+// $arrays = ["Infoserv", 10, 114];
+
+// echo "</br>$arrays[0]";
+
+//palindromo
+// $p = "Ato idiota";
+// echo "<br/>$p";
+
+// $palavra = strtolower($p);
+// $palavra = str_replace(" ", "", $palavra);
+// $palindromoContrario = [];
+
+// $tamanho = strlen($palavra);
+// $cont = 0;
+// for($i = $tamanho - 1, $j = 0; $i >= 0 && $j < $tamanho; $i--, $j++){
+//     $palindromoContrario[$j] = $palavra[$i];
+// }
+
+// echo "<br/>Ao contrario: ";
+// for($i = 0; $i <br $tamanho; $i++){
+//     echo "$palindromoContrario[$i] ";
+//     if ($palavra[$i] == $palindromoContrario[$i]){
+//         $cont++;
+//     }
+// }
+// if ($cont == $tamanho){
+//     echo "<br/>$p, É palindromo";
+// }else{
+//     echo "<br/>$p, não é palindromo";
+// }
+
+// palindromo 2
+// $palavra = "osso";
+// $tamanho = strlen($palavra)-1;
+// $a = 0;
+// $ehPalindromo = true;
+
+
+// for($i = $tamanho; $i >= 0; $i--){
+//     $letrasIguais = $palavra[$a] == $palavra[$i];
+//     if(!$letrasIguais){
+//         $ehPalindromo = false;
+//         break;
+//     }
+//     $a++;
+// }
+// if($ehPalindromo){
+//     echo "</br>A palavra $palavra é um palindromo.";
+// }else{
+//     echo "</br>A palavra $palavra não é um palindromo.";
+// }
+
+// Exercicio: procurar uma palavra em uma frase
+
+$palavra = "abacaxi";
+$frase = "Curso de abacaxi na Infoserv abacaxi Infoserv abacaxi Infoserv abacaxi Infoserv abacaxi";
+
+$palavra = strtolower($palavra);
+$frase = strtolower($frase);
+
+$tamanhoPalavra = strlen($palavra);
+$tamanhoFrase = strlen($frase);
+$encontrou = false;
+$nPalavras = 0;
+
+for($i = 0; $i < $tamanhoFrase; $i++){
+    $cont = 0;
+
+    if($palavra[0] == $frase[$i]){
+        $k = $i;
+        for($j = 0; $j < $tamanhoPalavra; $j++, $k++){
+            if($palavra[$j] != $frase[$k]){
+                break;
+            }else{$cont++;}
         }
     }
-    if($divisores == 2){
-        $cont++;
-        echo "<br/>$cont -> $numero";
+    if($cont == $tamanhoPalavra){
+        $encontrou = true;
+        $nPalavras++;
+ 
     }
+
 }
+if($encontrou){
+    echo "A palavra esta na frase!-> $nPalavras vezes";
+}else{echo "A palavra nao esta na frase!";}
