@@ -388,35 +388,35 @@ if($media_ponderada < 7){
 
 // Exercicio: procurar uma palavra em uma frase
 
-$palavra = "abacaxi";
-$frase = "Curso de abacaxi na Infoserv abacaxi Infoserv abacaxi Infoserv abacaxi Infoserv abacaxi";
+// $palavra = "abacaxi";
+// $frase = "Curso de abacaxi na Infoserv abacaxi Infoserv abacaxi Infoserv abacaxi Infoserv abacaxi";
 
-$palavra = strtolower($palavra);
-$frase = strtolower($frase);
+// $palavra = strtolower($palavra);
+// $frase = strtolower($frase);
 
-$tamanhoPalavra = strlen($palavra);
-$tamanhoFrase = strlen($frase);
-$encontrou = false;
-$nPalavras = 0;
+// $tamanhoPalavra = strlen($palavra);
+// $tamanhoFrase = strlen($frase);
+// $encontrou = false;
+// $nPalavras = 0;
 
-for($i = 0; $i < $tamanhoFrase; $i++){
-    $cont = 0;
+// for($i = 0; $i < $tamanhoFrase; $i++){
+//     $cont = 0;
 
-    if($palavra[0] == $frase[$i]){
-        $k = $i;
-        for($j = 0; $j < $tamanhoPalavra; $j++, $k++){
-            if($palavra[$j] != $frase[$k]){
-                break;
-            }else{$cont++;}
-        }
-    }
-    if($cont == $tamanhoPalavra){
-        $encontrou = true;
-        $nPalavras++;
+//     if($palavra[0] == $frase[$i]){
+//         $k = $i;
+//         for($j = 0; $j < $tamanhoPalavra; $j++, $k++){
+//             if($palavra[$j] != $frase[$k]){
+//                 break;
+//             }else{$cont++;}
+//         }
+//     }
+//     if($cont == $tamanhoPalavra){
+//         $encontrou = true;
+//         $nPalavras++;
  
-    }
+//     }
 
-}
-if($encontrou){
-    echo "A palavra esta na frase!-> $nPalavras vezes";
-}else{echo "A palavra nao esta na frase!";}
+// }
+// if($encontrou){
+//     echo "A palavra esta na frase!-> $nPalavras vezes";
+// }else{echo "A palavra nao esta na frase!";}
