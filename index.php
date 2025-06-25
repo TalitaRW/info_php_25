@@ -348,7 +348,7 @@ if($media_ponderada < 7){
 
 // $tamanho = strlen($palavra);
 // $cont = 0;
-// for($i = $tamanho - 1, $j = 0; $i >= 0 && $j < $tamanho; $i--, $j++){
+// for($i = $tamanho - 1, $j = 0; $i >= 0 && $j <br $tamanho; $i--, $j++){
 //     $palindromoContrario[$j] = $palavra[$i];
 // }
 
@@ -388,8 +388,8 @@ if($media_ponderada < 7){
 
 // Exercicio: procurar uma palavra em uma frase
 
-// $palavra = "abacaxi";
-// $frase = "Curso de abacaxi na Infoserv abacaxi Infoserv abacaxi Infoserv abacaxi Infoserv abacaxi";
+// $palavra = " o ";
+// $frase = "Curso de o programação na Infoserv tprogramaçãoem um curso de programação";
 
 // $palavra = strtolower($palavra);
 // $frase = strtolower($frase);
@@ -413,10 +413,42 @@ if($media_ponderada < 7){
 //     if($cont == $tamanhoPalavra){
 //         $encontrou = true;
 //         $nPalavras++;
- 
+
 //     }
 
 // }
 // if($encontrou){
 //     echo "A palavra esta na frase!-> $nPalavras vezes";
 // }else{echo "A palavra nao esta na frase!";}
+
+//24/06/2025---------------------------------------
+
+//FUNÇOES OU METODOS
+
+echo "<br>". strlen("Infoserv"); //um parametro e que retorne qualquer coisa, não tem assinatura de retorno
+// cont();
+// strpos();
+
+echo "<br>". substr("Infoserv", 2, 5);//mais de um parametro
+                                         //assinar o retorno                                                       
+function strlenInfoserv(string $string): int {
+
+    $contCaracteres = 0;
+
+    for($i = 0; $i < 5; $i++){
+
+        $existeIndice = $string[$i] || false;
+
+        if($existeIndice){
+            $contCaracteres++;
+        }
+
+    }
+
+    return $contCaracteres; //preciso saber a informação, por exemplo, uma função que envia e-mails não precisa de return
+
+}
+
+echo "<br>". strlenInfoserv("Infoserv");
+
+//fazer funções no exercicio da calculadora
