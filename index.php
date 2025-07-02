@@ -425,30 +425,128 @@ if($media_ponderada < 7){
 
 //FUNÇOES OU METODOS
 
-echo "<br>". strlen("Infoserv"); //um parametro e que retorne qualquer coisa, não tem assinatura de retorno
+// echo "<br>". strlen("Infoserv"); //um parametro e que retorne qualquer coisa, não tem assinatura de retorno
 // cont();
 // strpos();
 
-echo "<br>". substr("Infoserv", 2, 5);//mais de um parametro
-                                         //assinar o retorno                                                       
-function strlenInfoserv(string $string): int {
+// echo "<br>". substr("Infoserv", 2, 5);//mais de um parametro
+//                                          //assinar o retorno                                                       
+// function strlenInfoserv(string $string): int {
 
-    $contCaracteres = 0;
+//     $contCaracteres = 0;
 
-    for($i = 0; $i < 5; $i++){
+//     for($i = 0; $i < 5; $i++){
 
-        $existeIndice = $string[$i] || false;
+//         $existeIndice = $string[$i] || false;
 
-        if($existeIndice){
-            $contCaracteres++;
-        }
+//         if($existeIndice){
+//             $contCaracteres++;
+//         }
 
-    }
+//     }
 
-    return $contCaracteres; //preciso saber a informação, por exemplo, uma função que envia e-mails não precisa de return
+//     return $contCaracteres; //preciso saber a informação, por exemplo, uma função que envia e-mails não precisa de return
 
-}
+// }
 
-echo "<br>". strlenInfoserv("Infoserv");
+// echo "<br>". strlenInfoserv("Infoserv");
 
 //fazer funções no exercicio da calculadora
+
+// $valor1 = 5;
+// $valor2 = 9;
+// $operacao = "/";
+
+// function soma($valor1, $valor2){
+//     $resultado = $valor1 + $valor2;
+//     return number_format($resultado, 2);
+// }
+// function subtracao($valor1, $valor2){
+//     $resultado = $valor1 - $valor2;
+//     return number_format($resultado, 2);
+// }
+// function multiplicacao($valor1, $valor2){
+//     $resultado = $valor1 * $valor2;
+//     return number_format($resultado, 2);
+// }
+// function divisao($valor1, $valor2){
+//     $resultado = $valor1 / $valor2;
+//     return number_format($resultado, 2);
+// }
+// if ($operacao == "+"){echo "<br>". soma($valor1, $valor2);
+
+// }elseif($operacao == "-"){ echo "<br>". subtracao($valor1, $valor2);
+
+// }elseif($operacao == "*"){ echo "<br>". multiplicacao($valor1, $valor2);
+
+// }elseif($operacao == "/"){echo "<br>". divisao($valor1, $valor2);
+
+// }else{echo "<br>Invalido";}
+
+/**usuario informa data - validar essa data
+ * caso invalida retornar a proxima data correta
+ * 29/02/2025 => 01/03/2025
+ * fuçao expload
+ */
+
+$data = "29/02/2025";
+$dataArray = explode("/", $data);
+
+function diaDia($dia){
+    return 1; 
+}
+function mesMes($mes){
+    return $mes + 1;
+}
+function data($dataArray){
+    $dia = (int)$dataArray[0];
+    $mes = (int)$dataArray[1]; 
+    $ano = (int)$dataArray[2];
+    
+
+    if($mes < 1 || $mes > 13){
+        $dia = diaDia($dia);
+        $mes = 1; 
+        $ano += 1;
+    }
+    if ($mes == 1 || $mes == 3 || $mes == 5 || $mes == 7 || $mes == 8 || $mes == 10 || $mes == 12){
+        //meses com 31 dias 
+        if ($dia > 31 ){
+            $dia  = diaDia($dia);
+            $mes = mesMes($mes);
+        }
+    }elseif($mes == 4 || $mes == 6 || $mes == 9 || $mes == 11){
+            //meses com 30 dias
+            if ($dia > 30 ){
+                $dia = diaDia($dia);
+                $mes = mesMes($mes);
+            }
+    }elseif($mes == 2){
+        if($ano % 4 == 0 && $ano % 100 != 0 || $ano % 400 == 0){// ano bissexto
+            if($dia > 29){
+                $dia = diaDia($dia);
+                $mes = mesMes($mes);
+            }
+        }else{//ano não bissexto
+                if($dia > 28){
+                    $dia = diaDia($dia);
+                    $mes = 3;
+                }
+            }
+    
+    }else{
+        $dia = diaDia($dia);
+        $mes = 1;
+        $ano = $ano + 1;
+
+    }
+    $dataCorrigida = $dia . "/" . $mes . "/" . $ano;
+    return $dataCorrigida;
+}
+echo "<br/>".data($dataArray);
+
+//**
+// ordenar os arrays em ordem decrescente
+// $alfa = ["A", "B", "C", "D", "E"] 
+// $numeros = [10, 20, 30, 40, 50]
+// laço for e count*/
