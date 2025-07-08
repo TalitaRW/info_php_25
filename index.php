@@ -1,552 +1,109 @@
-<?php
-
-//echo "Olá Mundo <br>"; 
-//<br> quebra de linha html - navegador so entente HTML, Java
-//usa \n se for executar no terminal
-//echo "Soma 2 + 2 = ", 2 + 2;
-
-/* comentario
-    de bloco*/
-
-/* $d = 3;
-$e = 5;
-$f = $d + $e;
-
-echo "<br> Soma d + e = ", $f;*/
-
-
-//13/05/2025
-//Tabuada
-/*echo "<br/>";
-$multiplicador = 4;
-echo "Tabuada do $multiplicador <br/>";
-echo "1 x $multiplicador = ", 1 * $multiplicador, "<br/>";
-echo "2 x $multiplicador = ", 2 * $multiplicador, "<br/>";
-echo "3 x $multiplicador = ", 3 * $multiplicador, "<br/>";
-echo "4 x $multiplicador = ", 4 * $multiplicador, "<br/>";
-echo "5 x $multiplicador = ", 5 * $multiplicador, "<br/>";
-echo "6 x $multiplicador = ", 6 * $multiplicador, "<br/>";
-echo "7 x $multiplicador = ", 7 * $multiplicador, "<br/>";
-echo "8 x $multiplicador = ", 8 * $multiplicador, "<br/>";
-echo "9 x $multiplicador = ", 9 * $multiplicador, "<br/>";
-echo "10 x $multiplicador = ", 10 * $multiplicador, "<br/>";
-echo "<br/>";
-$multiplicador_2 = 9;
-echo "Tabuada do $multiplicador_2 <br/>";
-for($i = 0; $i <=10; $i++)
-{
-    echo "$i X $multiplicador_2 = ", $i * $multiplicador_2, "<br/>";
-}
-*/
-// 20/05/2025
-
-// constante
-//const DATA_NASCIMENTO = "01/01/1950";
-//constante sempre neste formato -> snake case e maiusculas
-/**echo "<br/>";
-
-echo DATA_NASCIMENTO,"<br/>";
-
-echo date("d/m/y"), "<br/>";
-
-echo date("d/m/y H:i:s"), "<br/>";
-
-$potencia_10 = 4e20;
-echo $potencia_10, "<br/>";
-
-echo 4 * $potencia_10, "<br/>";
-*/
-//mock/chumbado - valores fixos "informados pelo usuario"
-/*$valorA = 3;
-$valorB = 5;
-
-if ($valorA == $valorB){
-    echo "Os numeros são iguais!<br/>";
-}else if ($valorA != $valorB){
-    echo "Os numeros são diferentes!<br/>";
-}else{
-    echo "Não são valores validos!<br/>";
-}*/
-
-/**
- * verificar a apartir de um ano(numero) informado a idade do usuario, se é maior de idade.
-*/
-/*
-$ano_nascimento = 2010;
-$ano = date("Y");
-
-//echo $ano_nascimento, "<br/>", $ano, "<br/>";
-
-$idade = $ano - $ano_nascimento;
-
-if($idade < 18){
-    echo "<br/>Sua idade é $idade anos - Menor de idade";
-}else{
-    echo "<br/>Sua idade é  $idade anos - Maior de idade";
-}
-*/
-/**
- * dadas as notas de 4 provas, a media para aprovação é 7.
- * calcular se o aluno atiniu a média e informar se o aluno foi aprovado.
- * 
- * calcular a média pnderada e harmonica
- */
-
-/*echo "<br/> Médias";
-echo "<br/>";
-$nota_1 = 9;
-$nota_2 = 6;
-$nota_3 = 8;
-$nota_4 = 6.7;
-
-$media = ($nota_1 + $nota_2 + $nota_3 + $nota_4) / 4;
-echo "<br/> Media = ", number_format($media, 2);
-
-if($media < 7){
-    echo "<br/> Reprovado";
-}else{echo "<br/>Aprovado";}
-
-$media_harmonica = 4 / (1/$nota_1 + 1/$nota_2 + 1/$nota_3 + 1/$nota_4 );
-echo "<br/> Media Harmonica = ", number_format($media_harmonica, 2);
-
-if($media_harmonica < 7){
-    echo "<br/>Reprovado";
-}else{echo "<br/>Aprovado";}
-
-$media_ponderada = ($nota_1 * 1 + $nota_2 * 2 + $nota_3 * 3 + $nota_4 * 4) / (1 + 2 + 3 + 4);
-echo "<br/> Media Ponderada = ", number_format($media_ponderada, 2);
-
-if($media_ponderada < 7){
-    echo "<br/>Reprovado";
-}else{echo "<br/>Aprovado";}
-*/
-
-//CALCULADORA
-
-// $operacao = "+";
-// $valor_1 = 8;
-// $valor_2 = 5;
-// $resultado = 0;
-
-// if ($operacao == "+"){
-//     $resultado = $valor_1 + $valor_2;
-//     echo "<br/> $valor_1 + $valor_2 = $resultado";
-// } else if ($operacao == "-"){
-//     $resultado = $valor_1 - $valor_2;
-//     echo "<br/> $valor_1 - $valor_2 = $resultado";
-// } else if ($operacao == "*"){
-//     $resultado = $valor_1 * $valor_2;
-//     echo "<br/> $valor_1 * $valor_2 = $resultado";
-// } else if ($operacao == "/" && $valor_2 != 0){
-//     $resultado = $valor_1 / $valor_2;
-//     echo "<br/> $valor_1 / $valor_2", " = ", number_format($resultado, 2);
-// }else{
-//     echo "<br/>Operação Invalida";
-// }
-
-// switch ($operacao){
-//     case '+':
-//         echo "<br/> $valor_1 + $valor_2 =", number_format($valor_1 + $valor_2, 2);
-//         break;
-//     case "-":
-//         echo "<br/> $valor_1 - $valor_2 = ", number_format($valor_1 - $valor_2, 2);
-//         break;
-//     case "*":
-//         echo "<br/> $valor_1 * $valor_2 = ", number_format($valor_1 * $valor_2, 2);
-//         break;    
-//     case "/":
-//         if ($valor_2 == 0){
-//             echo "<br/>DIV/0";
-//         }else{
-//             echo "<br/> $valor_1 / $valor_2", " = ", number_format($valor_1 / $valor_2, 2);
-//             break;
-//         }
-
-//     default;
-//         echo "<br/><br/>Operação Invalida";
-//         break;
-// }
-
-/*ler 3 valore e informar se eles são iguais*/
-// $valor_A = 6;
-// $valor_B = 6;
-// $valor_C = 6;
-// if ($valor_A == $valor_B && $valor_A == $valor_C){
-//     echo "<br/> $valor_A = $valor_B = $valor_C <br/>Valores Iguais";
-// }else {echo "<br/>Os valores não são iguais";}
-
-
-
-/*ler 3 valores e informar o tipo de triangulo formado*/
-// $lado_A = 82;
-// $lado_B = 80;
-// $lado_C = 44;
- 
-// //verificar existencia - soma de quaisquer dois lados deve ser maior que o terceiro
-// if ($lado_A == $lado_B && $lado_B == $lado_C){
-//     echo "<br/>Triangulo Equilátero";
-// }else if ($lado_A + $lado_B > $lado_C && $lado_A + $lado_C > $lado_B && $lado_C + $lado_B > $lado_A){
-//     if($lado_A != $lado_B && $lado_B != $lado_C){
-//         echo "<br/>Triangulo Escaleno";
-//     }else{echo "<br/>Triangulo Isóseles"; }
-// }else{ echo "<br/>Não é triangulo!!!!";}
-
-//FOR
-// for($i = 0; $i < 10; $i++){
-//     echo "<br/> $i";
-
-// }
-// echo "<br/> ----------------------";
-// $i = 0;
-// while ($i < 10){
-//     echo "<br/> $i";
-//     $i++;
-// }
-// echo "<br/> ----------------------";
-// $j = 11;
-// do{
-//      echo "<br/> $j";
-//     $j++;
-// }while($j < 10);
-
-/**refazer o exercicio da tabuada  */
-
-// $multiplicador = 5;
-// $i=0;
-// for ($i = 0; $i <= 10; $i++){
-//     echo "$i x $multiplicador = ", $i * $multiplicador, "<br/>";
-// }
-
-// echo "<br/>";
-
-// $i = 0;
-// while($i <= 10){
-//     echo "$multiplicador x $i = ", $multiplicador * $i, "<br/>";
-//     $i++;
-// }
-
-/**03/06/2025*/
-
-// $a = 5/2;
-// echo $a;
-// echo "<br/>";
-// $b = 5%2;
-// echo $b;
-// echo "<br/>";
-// $c = intdiv(5,2);
-// echo $c;
-
-//para descobrir se é par ou não
-
-// $resultado = 10 / 2;
-// $resultado = 10 % 2;
-
-// $numero = 1452362;
-// $resto = $numero % 2;
-// $par = $resto == 0;
-
-
-//20 primeiros pares
-
-// echo "FOR--------<br/>";
-// $cont = 1;
-// for($i = 0; $cont < 21; $i++){
-//     if($i % 2 == 0){
-//         echo "$cont -> $i <br/>";
-//         $cont++;        
-//     }
-// }
-
-// echo "WHILE--------";
-// $cont = 1;
-// $k = 0;
-// while($cont < 21){
-//     if($k % 2 == 0){
-//         echo "<br/>$cont ->$k";
-//         $cont++;
-//     }
-//     $k++;
-// }
-//contagem regressiva de 10 - 0
-// echo "<br/>CONTAGEM REGRES.";
-// for($i = 10; $i>=0; $i--){
-//     echo "<br/>$i";
-// }
-// echo "<br/>PRIMOS";
-// // encontrar os primeiros 5 primeiros primos
-
-// $numero = 2;
-// $cont = 0;
-
-// while ($cont < 15){
-//     $divisores = 0;
-    
-//     for($div =1; $div <= $numero; $div++){
-//         if($numero % $div == 0){
-//             $divisores++;
-//         }
-//     }
-//     if($divisores == 2){
-//         $cont++;
-//         echo "<br/>$cont -> $numero";
-        
-//     }
-//     $numero++;
-    
-// }
-
-// echo "<br/>PRIMOS 2";
-// // encontrar os primeiros 5 primeiros primos
-// $cont = 0;
-// for($numero = 2; $cont < 15;  $numero++){
-//     $divisores = 0;
-//     for($div = 1; $div <= $numero; $div++){
-//         if($numero % $div == 0){
-//             $divisores++;
-//         }
-//     }
-//     if($divisores == 2){
-//         $cont++;
-//         echo "<br/>$cont -> $numero";
-//     }
-// }
-
-//17/06_____________________________________________
-
-// $primos = [];
-// $cont = 0;
-// for($numero = 2; $cont < 15;  $numero++){
-//     $divisores = 0;
-//     for($div = 1; $div <= $numero; $div++){
-//         if($numero % $div == 0){
-//             $divisores++;
-            
-//         }
-//     }
-//     if($divisores == 2){
-//         $cont++;
-//         $primos[] = $numero;
-        
-//     }
-// }
-// echo "<br/>Primos: ";
-// for($i = 0; $i < 15; $i++){
-//     echo "$primos[$i], ";
-// }
-
-// $arrays = ["Infoserv", 10, 114];
-
-// echo "</br>$arrays[0]";
-
-//palindromo
-// $p = "Ato idiota";
-// echo "<br/>$p";
-
-// $palavra = strtolower($p);
-// $palavra = str_replace(" ", "", $palavra);
-// $palindromoContrario = [];
-
-// $tamanho = strlen($palavra);
-// $cont = 0;
-// for($i = $tamanho - 1, $j = 0; $i >= 0 && $j <br $tamanho; $i--, $j++){
-//     $palindromoContrario[$j] = $palavra[$i];
-// }
-
-// echo "<br/>Ao contrario: ";
-// for($i = 0; $i <br $tamanho; $i++){
-//     echo "$palindromoContrario[$i] ";
-//     if ($palavra[$i] == $palindromoContrario[$i]){
-//         $cont++;
-//     }
-// }
-// if ($cont == $tamanho){
-//     echo "<br/>$p, É palindromo";
-// }else{
-//     echo "<br/>$p, não é palindromo";
-// }
-
-// palindromo 2
-// $palavra = "osso";
-// $tamanho = strlen($palavra)-1;
-// $a = 0;
-// $ehPalindromo = true;
-
-
-// for($i = $tamanho; $i >= 0; $i--){
-//     $letrasIguais = $palavra[$a] == $palavra[$i];
-//     if(!$letrasIguais){
-//         $ehPalindromo = false;
-//         break;
-//     }
-//     $a++;
-// }
-// if($ehPalindromo){
-//     echo "</br>A palavra $palavra é um palindromo.";
-// }else{
-//     echo "</br>A palavra $palavra não é um palindromo.";
-// }
-
-// Exercicio: procurar uma palavra em uma frase
-
-// $palavra = " o ";
-// $frase = "Curso de o programação na Infoserv tprogramaçãoem um curso de programação";
-
-// $palavra = strtolower($palavra);
-// $frase = strtolower($frase);
-
-// $tamanhoPalavra = strlen($palavra);
-// $tamanhoFrase = strlen($frase);
-// $encontrou = false;
-// $nPalavras = 0;
-
-// for($i = 0; $i < $tamanhoFrase; $i++){
-//     $cont = 0;
-
-//     if($palavra[0] == $frase[$i]){
-//         $k = $i;
-//         for($j = 0; $j < $tamanhoPalavra; $j++, $k++){
-//             if($palavra[$j] != $frase[$k]){
-//                 break;
-//             }else{$cont++;}
-//         }
-//     }
-//     if($cont == $tamanhoPalavra){
-//         $encontrou = true;
-//         $nPalavras++;
-
-//     }
-
-// }
-// if($encontrou){
-//     echo "A palavra esta na frase!-> $nPalavras vezes";
-// }else{echo "A palavra nao esta na frase!";}
-
-//24/06/2025---------------------------------------
-
-//FUNÇOES OU METODOS
-
-// echo "<br>". strlen("Infoserv"); //um parametro e que retorne qualquer coisa, não tem assinatura de retorno
-// cont();
-// strpos();
-
-// echo "<br>". substr("Infoserv", 2, 5);//mais de um parametro
-//                                          //assinar o retorno                                                       
-// function strlenInfoserv(string $string): int {
-
-//     $contCaracteres = 0;
-
-//     for($i = 0; $i < 5; $i++){
-
-//         $existeIndice = $string[$i] || false;
-
-//         if($existeIndice){
-//             $contCaracteres++;
-//         }
-
-//     }
-
-//     return $contCaracteres; //preciso saber a informação, por exemplo, uma função que envia e-mails não precisa de return
-
-// }
-
-// echo "<br>". strlenInfoserv("Infoserv");
-
-//fazer funções no exercicio da calculadora
-
-// $valor1 = 5;
-// $valor2 = 9;
-// $operacao = "/";
-
-// function soma($valor1, $valor2){
-//     $resultado = $valor1 + $valor2;
-//     return number_format($resultado, 2);
-// }
-// function subtracao($valor1, $valor2){
-//     $resultado = $valor1 - $valor2;
-//     return number_format($resultado, 2);
-// }
-// function multiplicacao($valor1, $valor2){
-//     $resultado = $valor1 * $valor2;
-//     return number_format($resultado, 2);
-// }
-// function divisao($valor1, $valor2){
-//     $resultado = $valor1 / $valor2;
-//     return number_format($resultado, 2);
-// }
-// if ($operacao == "+"){echo "<br>". soma($valor1, $valor2);
-
-// }elseif($operacao == "-"){ echo "<br>". subtracao($valor1, $valor2);
-
-// }elseif($operacao == "*"){ echo "<br>". multiplicacao($valor1, $valor2);
-
-// }elseif($operacao == "/"){echo "<br>". divisao($valor1, $valor2);
-
-// }else{echo "<br>Invalido";}
-
 /**usuario informa data - validar essa data
  * caso invalida retornar a proxima data correta
  * 29/02/2025 => 01/03/2025
  * fuçao expload
  */
 
-$data = "29/02/2025";
-$dataArray = explode("/", $data);
+// $data = "29/02/2025";
+// $dataArray = explode("/", $data);
 
-function diaDia($dia){
-    return 1; 
-}
-function mesMes($mes){
-    return $mes + 1;
-}
-function data($dataArray){
-    $dia = (int)$dataArray[0];
-    $mes = (int)$dataArray[1]; 
-    $ano = (int)$dataArray[2];
+// function diaDia($dia){
+//     return 1; 
+// }
+// function mesMes($mes){
+//     return $mes + 1;
+// }
+// function data($dataArray){
+//     $dia = (int)$dataArray[0];
+//     $mes = (int)$dataArray[1]; 
+//     $ano = (int)$dataArray[2];
     
 
-    if($mes < 1 || $mes > 13){
-        $dia = diaDia($dia);
-        $mes = 1; 
-        $ano += 1;
-    }
-    if ($mes == 1 || $mes == 3 || $mes == 5 || $mes == 7 || $mes == 8 || $mes == 10 || $mes == 12){
-        //meses com 31 dias 
-        if ($dia > 31 ){
-            $dia  = diaDia($dia);
-            $mes = mesMes($mes);
-        }
-    }elseif($mes == 4 || $mes == 6 || $mes == 9 || $mes == 11){
-            //meses com 30 dias
-            if ($dia > 30 ){
-                $dia = diaDia($dia);
-                $mes = mesMes($mes);
-            }
-    }elseif($mes == 2){
-        if($ano % 4 == 0 && $ano % 100 != 0 || $ano % 400 == 0){// ano bissexto
-            if($dia > 29){
-                $dia = diaDia($dia);
-                $mes = mesMes($mes);
-            }
-        }else{//ano não bissexto
-                if($dia > 28){
-                    $dia = diaDia($dia);
-                    $mes = 3;
-                }
-            }
+//     if($mes < 1 || $mes > 13){
+//         $dia = diaDia($dia);
+//         $mes = 1; 
+//         $ano += 1;
+//     }
+//     if ($mes == 1 || $mes == 3 || $mes == 5 || $mes == 7 || $mes == 8 || $mes == 10 || $mes == 12){
+//         //meses com 31 dias 
+//         if ($dia > 31 ){
+//             $dia  = diaDia($dia);
+//             $mes = mesMes($mes);
+//         }
+//     }elseif($mes == 4 || $mes == 6 || $mes == 9 || $mes == 11){
+//             //meses com 30 dias
+//             if ($dia > 30 ){
+//                 $dia = diaDia($dia);
+//                 $mes = mesMes($mes);
+//             }
+//     }elseif($mes == 2){
+//         if($ano % 4 == 0 && $ano % 100 != 0 || $ano % 400 == 0){// ano bissexto
+//             if($dia > 29){
+//                 $dia = diaDia($dia);
+//                 $mes = mesMes($mes);
+//             }
+//         }else{//ano não bissexto
+//                 if($dia > 28){
+//                     $dia = diaDia($dia);
+//                     $mes = 3;
+//                 }
+//             }
     
-    }else{
-        $dia = diaDia($dia);
-        $mes = 1;
-        $ano = $ano + 1;
+//     }else{
+//         $dia = diaDia($dia);
+//         $mes = 1;
+//         $ano = $ano + 1;
 
-    }
-    $dataCorrigida = $dia . "/" . $mes . "/" . $ano;
-    return $dataCorrigida;
-}
-echo "<br/>".data($dataArray);
+//     }
+//     $dataCorrigida = $dia . "/" . $mes . "/" . $ano;
+//     return $dataCorrigida;
+// }
+// echo "<br/>".data($dataArray);
 
 //**
 // ordenar os arrays em ordem decrescente
 // $alfa = ["A", "B", "C", "D", "E"] 
 // $numeros = [10, 20, 30, 40, 50]
 // laço for e count*/
+
+$alfa = ["A", "B", "C", "D", "E"];
+$numeros = [10, 20, 30, 40, 50];
+$aleatorio = [rand(1, 100), rand(1, 100), rand(1, 100), rand(1, 100), rand(1, 100), rand(1, 100), 
+                rand(1, 100), rand(1, 100), rand(1, 100), rand(1, 100)];
+
+
+//$vetor = $numeros;
+//$cont = count($vetor);
+//echo "<br/> $cont";
+$vetor = [];
+
+function ordenar($vetor){
+    
+    $cont = count($vetor);
+    $novo = $vetor;
+
+    for($i = 0, $j = ($cont-1); $i < $cont ; $i++, $j--){
+        for($j = 0 ; $j < $cont - $i -1 ; $j++){
+
+             if ($novo[$j] > $novo[$j + 1]) {
+                // ordena os elementos 
+                $aux = $novo[$j];
+                $novo[$j] = $novo[$j + 1];
+                $novo[$j + 1] = $aux;
+
+            }
+        }
+   
+    }
+    return $novo;
+}
+
+$vetorOrdenado = ordenar($numeros);
+echo "<br/>" . implode(", ", $vetorOrdenado);
+
+$vetorOrdenado = ordenar($alfa);
+echo "<br/>" . implode(", ", $vetorOrdenado);
+
+echo "<br/>Vetor Desordenado: ". implode(", ", $aleatorio);
+$vetorOrdenado = ordenar($aleatorio);
+echo "<br/>Vetor Ordenado: " . implode(", ", $vetorOrdenado);
